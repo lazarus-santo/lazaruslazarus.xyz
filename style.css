@@ -31,6 +31,7 @@
 
 html, body {
   height: 100%;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -93,7 +94,7 @@ body {
 
 #main h1 {
   font-family: var(--font-display);
-  font-size: clamp(60px, 11vw, 140px);
+  font-size: clamp(52px, 11vw, 140px);
   line-height: 0.9;
   letter-spacing: -0.01em;
   color: var(--white);
@@ -102,7 +103,7 @@ body {
 
 .tagline {
   font-family: var(--font-body);
-  font-size: clamp(12px, 1.2vw, 15px);
+  font-size: clamp(13px, 2vw, 15px);
   color: var(--white);
   opacity: 0.65;
   margin-bottom: 32px;
@@ -111,7 +112,7 @@ body {
 
 .signup-label {
   font-family: var(--font-body);
-  font-size: clamp(11px, 1vw, 13px);
+  font-size: clamp(12px, 1.8vw, 13px);
   color: var(--white);
   opacity: 0.45;
   margin-top: 12px;
@@ -193,7 +194,7 @@ body {
 
 .footer-artist-link {
   font-family: var(--font-body);
-  font-size: clamp(11px, 1vw, 13px);
+  font-size: clamp(12px, 1.8vw, 13px);
   color: var(--white);
   text-decoration: none;
   opacity: 0.45;
@@ -231,7 +232,7 @@ body {
   transform: translateX(-50%);
   z-index: 10;
   font-family: var(--font-body);
-  font-size: clamp(11px, 1vw, 13px);
+  font-size: clamp(11px, 1.8vw, 13px);
   color: var(--white);
   opacity: 0.45;
   letter-spacing: 0.02em;
@@ -241,11 +242,25 @@ body {
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 600px) {
+  #main {
+    padding: 0 28px;
+  }
+
+  .signup-form {
+    max-width: 100%;
+  }
+
   #footer {
-    padding: 0 20px 20px;
+    padding: 0 20px calc(20px + env(safe-area-inset-bottom));
   }
 
   #artwork-credit {
     display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  #main h1 {
+    font-size: 44px;
   }
 }
