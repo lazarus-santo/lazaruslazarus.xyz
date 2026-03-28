@@ -63,6 +63,27 @@ async function rotateBackground() {
 rotateBackground();
 setInterval(rotateBackground, ROTATE_INTERVAL);
 
+// ─── FAVICON ─────────────────────────────────────────────
+function setFavicon() {
+  const canvas = document.createElement('canvas');
+  canvas.width = 64;
+  canvas.height = 64;
+  const ctx = canvas.getContext('2d');
+
+  ctx.fillStyle = '#e2ce3a';
+  ctx.font = 'bold 52px Array, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('L', 32, 34);
+
+  const link = document.querySelector("link[rel~='icon']") || document.createElement('link');
+  link.rel = 'icon';
+  link.href = canvas.toDataURL('image/png');
+  document.head.appendChild(link);
+}
+
+document.fonts.ready.then(setFavicon);
+
 // ─── KLAVIYO EMAIL SIGNUP ─────────────────────────────────
 const KLAVIYO_PUBLIC_KEY = 'pk_0d2feaaae4ebad5bc88fca4b9134db26fd';
 const KLAVIYO_LIST_ID = 'UmWFM7';
