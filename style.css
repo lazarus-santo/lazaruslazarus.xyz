@@ -118,23 +118,38 @@ body {
   font-size: clamp(13px, 2vw, 15px);
   color: var(--white);
   opacity: 0.65;
-  margin-bottom: 32px;
   letter-spacing: 0.02em;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 36px calc(28px + env(safe-area-inset-bottom));
+}
+
+.footer-signup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .signup-label {
   font-family: var(--font-body);
-  font-size: clamp(12px, 1.8vw, 13px);
+  font-size: clamp(11px, 1.8vw, 13px);
   color: var(--white);
   opacity: 0.45;
-  margin-top: 12px;
   letter-spacing: 0.02em;
 }
 
-/* ─── EMAIL SIGNUP ───────────────────────────────────────── */
 .signup-form {
   width: 100%;
-  max-width: 380px;
 }
 
 .signup-field {
@@ -185,23 +200,10 @@ body {
   outline-offset: 2px;
 }
 
-/* ─── FOOTER ─────────────────────────────────────────────── */
-#footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
+.footer-bottom {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  padding: 0 36px 28px;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .footer-artist-link {
@@ -256,8 +258,6 @@ body {
 @media (max-width: 600px) {
   #main {
     padding: 0 28px;
-    justify-content: center;
-    gap: 0;
   }
 
   #main h1 {
@@ -267,15 +267,10 @@ body {
 
   .tagline {
     font-size: 14px;
-    margin-bottom: 36px;
-  }
-
-  .signup-form {
-    max-width: 100%;
   }
 
   #footer {
-    padding: 0 20px calc(20px + env(safe-area-inset-bottom));
+    padding: 0 24px calc(20px + env(safe-area-inset-bottom));
   }
 
   #artwork-credit {

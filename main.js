@@ -130,6 +130,7 @@ if (signupForm) {
 
       if (res.ok || res.status === 202) {
         input.value = '';
+        input.blur();
         btn.textContent = '✓';
         setTimeout(() => {
           btn.textContent = '→';
