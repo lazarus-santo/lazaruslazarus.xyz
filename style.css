@@ -29,9 +29,15 @@
   --font-body: 'Gambarino', serif;
 }
 
-html, body {
+html {
+  height: -webkit-fill-available;
   height: 100%;
-  height: 100dvh;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
   overflow: hidden;
 }
 
@@ -57,9 +63,18 @@ body {
 
 /* ─── BACKGROUND LAYERS ──────────────────────────────────── */
 #bg,
-#bg-next {
+#bg-next,
+#overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+}
+
+#bg,
+#bg-next {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -73,8 +88,6 @@ body {
 }
 
 #overlay {
-  position: fixed;
-  inset: 0;
   background: rgba(0, 0, 0, 0.62);
   z-index: 2;
 }
@@ -82,7 +95,11 @@ body {
 /* ─── MAIN ───────────────────────────────────────────────── */
 #main {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
   z-index: 10;
   display: flex;
   flex-direction: column;
