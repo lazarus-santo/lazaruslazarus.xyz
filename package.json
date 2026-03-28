@@ -1,0 +1,23 @@
+{
+  "name": "lazarus",
+  "version": "1.0.0",
+  "description": "Lazarus - Making buying great art a bit less scary with the help of liquid courage",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://x-access-token:ghs_HcVJsX80bUwduCHyxrwYFcU0YwuoSj3ie8KB@github.com/lazarus-santo/Lazarus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazarus-santo/Lazarus/issues"
+  },
+  "homepage": "https://github.com/lazarus-santo/Lazarus#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
