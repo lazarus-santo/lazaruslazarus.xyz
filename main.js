@@ -88,7 +88,9 @@ document.fonts.ready.then(setFavicon);
 const KLAVIYO_PUBLIC_KEY = 'pk_0d2feaaae4ebad5bc88fca4b9134db26fd';
 const KLAVIYO_LIST_ID = 'UmWFM7';
 
-document.querySelectorAll('.signup-form').forEach(signupForm => {
+const signupForm = document.querySelector('.signup-form');
+
+if (signupForm) {
   signupForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const input = signupForm.querySelector('input[type="email"]');
@@ -143,4 +145,4 @@ document.querySelectorAll('.signup-form').forEach(signupForm => {
       btn.disabled = false;
     }
   });
-});
+}
