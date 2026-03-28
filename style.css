@@ -30,14 +30,12 @@
 }
 
 html {
-  height: -webkit-fill-available;
   height: 100%;
 }
 
 body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  min-height: 100dvh;
+  height: 100vh;
+  height: var(--vh, 100vh);
   overflow: hidden;
 }
 
@@ -69,8 +67,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  height: 100dvh;
+  height: 100vh;
+  height: var(--vh, 100vh);
 }
 
 #bg,
@@ -98,8 +96,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  height: 100dvh;
+  height: 100vh;
+  height: var(--vh, 100vh);
   z-index: 10;
   display: flex;
   flex-direction: column;

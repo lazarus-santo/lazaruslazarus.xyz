@@ -63,6 +63,13 @@ async function rotateBackground() {
 rotateBackground();
 setInterval(rotateBackground, ROTATE_INTERVAL);
 
+// ─── VIEWPORT HEIGHT FIX (iOS Safari) ────────────────────
+function setVh() {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+}
+setVh();
+window.addEventListener('resize', setVh);
+
 // ─── FAVICON ─────────────────────────────────────────────
 function setFavicon() {
   const canvas = document.createElement('canvas');
