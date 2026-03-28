@@ -140,12 +140,28 @@ body {
   gap: 8px;
 }
 
+/* Mobile footer signup hidden on desktop */
+.footer-signup {
+  display: none;
+}
+
 .signup-label {
   font-family: var(--font-body);
   font-size: clamp(11px, 1.8vw, 13px);
   color: var(--white);
   opacity: 0.45;
   letter-spacing: 0.02em;
+}
+
+/* Desktop main signup */
+.signup-form--main {
+  margin-top: 32px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.signup-label--main {
+  margin-top: 12px;
 }
 
 .signup-form {
@@ -267,6 +283,16 @@ body {
 
   .tagline {
     font-size: 14px;
+  }
+
+  /* Switch form to footer on mobile */
+  .signup-form--main,
+  .signup-label--main {
+    display: none;
+  }
+
+  .footer-signup {
+    display: flex;
   }
 
   #footer {
