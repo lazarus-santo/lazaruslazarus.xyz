@@ -85,7 +85,7 @@ function setFavicon() {
 document.fonts.ready.then(setFavicon);
 
 // ─── KLAVIYO EMAIL SIGNUP ─────────────────────────────────
-const KLAVIYO_PUBLIC_KEY = 'pk_0d2feaaae4ebad5bc88fca4b9134db26fd';
+const KLAVIYO_PUBLIC_KEY = 'UzNWKN';
 const KLAVIYO_LIST_ID = 'UmWFM7';
 
 const signupForm = document.querySelector('.signup-form');
