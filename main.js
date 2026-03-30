@@ -138,11 +138,11 @@ if (signupForm) {
       if (res.ok || res.status === 202) {
         input.value = '';
         input.blur();
-        btn.textContent = '✓';
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><polyline points="2,8 6,12 14,4"/></svg>';
         setTimeout(() => {
           btn.textContent = '→';
           btn.disabled = false;
-        }, 3000);
+        }, 6000);
       } else {
         throw new Error(`Status ${res.status}`);
       }
