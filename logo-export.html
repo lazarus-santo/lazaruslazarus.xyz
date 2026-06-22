@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lazarus Labs — Logo Export</title>
+  <style>
+    @font-face {
+      font-family: 'Array';
+      src: url('./assets/fonts/Array OTF/Array-Bold.otf') format('opentype');
+      font-weight: bold;
+      font-display: block;
+    }
+
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 24px;
+      font-family: sans-serif;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    button {
+      background: #e2ce3a;
+      color: #000;
+      border: none;
+      padding: 12px 28px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      letter-spacing: 0.08em;
+    }
+
+    button:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <canvas id="logo" width="1080" height="1080"></canvas>
+  <button onclick="download()">Download PNG</button>
+
+  <script>
+    const SIZE = 1080;
+
+    function draw() {
+      const canvas = document.getElementById('logo');
+      const ctx = canvas.getContext('2d');
+
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(0, 0, SIZE, SIZE);
+
+      ctx.fillStyle = '#FEFEFE';
+      ctx.font = `bold 148px 'Array', sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      ctx.fillText('LAZARUS', SIZE / 2, SIZE / 2 - 82);
+      ctx.fillText('LABS', SIZE / 2, SIZE / 2 + 90);
+    }
+
+    function download() {
+      const canvas = document.getElementById('logo');
+      const a = document.createElement('a');
+      a.download = 'lazarus-labs-logo.png';
+      a.href = canvas.toDataURL('image/png');
+      a.click();
+    }
+
+    document.fonts.ready.then(() => {
+      draw();
+    });
+  </script>
+</body>
+</html>

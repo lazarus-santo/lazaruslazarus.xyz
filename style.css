@@ -1,14 +1,14 @@
 /* ─── FONTS ─────────────────────────────────────────────── */
 @font-face {
   font-family: 'Array';
-  src: url('./assets/fonts/Array-Bold.otf') format('opentype');
+  src: url('./assets/fonts/Array OTF/Array-Bold.otf') format('opentype');
   font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gambarino';
-  src: url('./assets/fonts/Gambarino-Regular.otf') format('opentype');
+  src: url('./assets/fonts/Gambarino OTF/Gambarino-Regular.otf') format('opentype');
   font-weight: normal;
   font-display: swap;
 }
@@ -106,7 +106,7 @@ body {
 
 #main h1 {
   font-family: var(--font-display);
-  font-size: clamp(52px, 11vw, 140px);
+  font-size: clamp(56px, 13vw, 120px);
   line-height: 0.9;
   letter-spacing: -0.01em;
   color: var(--white);
